@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Certificate Generator Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Generate Certificate</h1>
+    <p>Please fill out the details to create a digital certificate.</p>
+
+    <form id="certForm" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Student Full Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. John Doe" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Student Email</label>
+        <input type="email" id="email" name="email" placeholder="e.g. john@example.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="course">Course / Internship Title</label>
+        <input type="text" id="course" name="course" placeholder="e.g. Web Development Internship" />
+      </div>
+
+      <div class="form-group">
+        <label for="duration">Duration</label>
+        <input type="text" id="duration" name="duration" placeholder="e.g. 3 Months" />
+      </div>
+
+      <div class="form-group">
+        <label for="issuedate">Issue Date</label>
+        <input type="date" id="issuedate" name="issuedate" />
+      </div>
+
+      <div class="form-group">
+        <label for="certid">Certificate ID</label>
+        <input type="text" id="certid" name="certid" placeholder="e.g. CERT123456" />
+      </div>
+
+      <div class="form-group">
+        <label for="qrcode">QR Code Link</label>
+        <input type="url" id="qrcode" name="qrcode" placeholder="e.g. https://yourproject.com/verify?id=CERT123456" />
+      </div>
+
+      <button type="submit">Generate</button>
+    </form>
+  </div>
+<section class="solution-section">
+  <h2>About the Certificate System</h2>
+  <p>
+    The <strong>Smart Certificate Generator & Verification System</strong> is a web-based platform built using Django and integrated with the Ethereum blockchain.
+    This system allows educational institutions to securely generate digital certificates for students or interns. 
+  </p>
+  <p>
+    A unique cryptographic hash of each certificate is stored on the blockchain via a smart contract, ensuring the certificate is tamper-proof and immutable. 
+    Metadata such as student name, certificate ID, and issue date is saved locally using SQLite for fast admin access.
+  </p>
+  <p>
+    Every certificate is linked to a unique ID or QR code. During verification, the system rehashes the certificate and compares it with the blockchain-stored hash.
+    If both match, the certificate is deemed authentic.
+  </p>
+  <ul>
+    <li><strong>Frontend:</strong> React.js, HTML, CSS, JavaScript</li>
+    <li><strong>Backend:</strong> Python (Django)</li>
+    <li><strong>Blockchain:</strong> Ethereum for hash-based verification</li>
+    <li><strong>Database:</strong> SQLite (locally stored metadata)</li>
+    <li><strong>Verification:</strong> QR scan or ID input → hash comparison → validation</li>
+  </ul>
+</section>
+
+  <script>
+    function validateForm() {
+      const fields = ["name", "email", "course", "duration", "issuedate", "certid", "qrcode"];
+      for (let field of fields) {
+        const value = document.getElementById(field).value.trim();
+        if (value === "") {
+          alert("Please fill out all fields.");
+          return false;
+        }
+      }
+
+      alert("Certificate data submitted successfully!");
+      return true; // simulate successful submission
+    }
+  </script>
+
+</body>
+</html>

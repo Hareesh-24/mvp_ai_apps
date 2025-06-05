@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e0f2fe, #f8fafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.container h1 {
+  color: #1d4ed8;
+  margin-bottom: 10px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.container p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #475569;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1em;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #1d4ed8;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+.solution-section {
+  background-color: #f5f9ff;
+  padding: 30px 25px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  max-width: 600px; /* Same as your form */
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.solution-section h2 {
+  font-size: 28px;
+  color: #1a4ad9;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.solution-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.solution-section ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.solution-section ul li {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 8px;
+}
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.solution-section {
+  background-color: #f0f6ff;
+  padding: 25px 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  max-width: 550px;  /* smaller width than form */
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;  /* smaller text */
+}
+
+.solution-section h2 {
+  font-size: 24px;
+  color: #1a4ad9;
+  margin-bottom: 18px;
+  text-align: center;
+}
